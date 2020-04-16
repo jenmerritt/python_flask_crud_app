@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 
 {% block index %}
-    <h1>Welcome to Hogwarts</h1>
-    {% for student in students %}
-        <div>
-            <p>
-                <a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a>
-            </p>
+    <div id="index-page-wrapper">
+        <div class="heading">
+            <h1>Welcome to Hogwarts</h1>
         </div>
-    {% endfor %}
+        <div class="student-list-wrapper">
+            <h2>Your Enrolled Students</h2>
+            <hr/>
+            <ul class="student-list-main">
+            {% for student in students %}
+                <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a></li>
+            {% endfor %}
+            </ul>
+            <hr/>
+            <p><a href="/students/new">Enrol Student</a></p>
+        </div>
+    </div>
 {% endblock %}

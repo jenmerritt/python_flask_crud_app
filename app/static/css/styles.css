@@ -1,0 +1,156 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Cinzel', serif;
+    background-image: url("../hogwarts-stairs.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Root Page */
+
+#root-page-wrapper {
+    width:100%;
+    margin: 0 auto;
+}
+
+#root-page-wrapper h1 {
+    font-size: 40px; 
+    text-align:center; 
+    padding: 20px;
+    background-color: #ffffff;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+#root-page-wrapper h1 a{
+    text-decoration: none;
+    color: midnightblue;
+}
+
+#root-page-wrapper h1 a:hover{
+    text-decoration: underline;
+    color: midnightblue;
+}
+
+/* Navigation Bar */
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #EEE8AA;
+    padding: 20px;
+}
+
+#nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    margin: 0 auto;
+    width: 280px;
+    font-size: 20px;
+}
+
+#nav li {
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#nav li a{
+    text-decoration: none;
+    color: #191970;
+}
+
+#nav li a:hover{
+    text-decoration: underline;
+}
+
+/* Index Page */
+
+#-index-page-wrapper {
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    margin: 0 auto;
+}
+
+.heading h1{
+    text-align: center;
+    font-size: 60px;
+    color: #EEE8AA;
+    font-weight: bold;
+}
+
+.student-list-wrapper h2{
+    font-size: 30px;
+    color: #2E0E02
+}
+
+hr {
+    border: 2px solid midnightblue;
+}
+
+.student-list-wrapper p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.student-list-wrapper p a{
+    color: #2E0E02;
+    text-decoration: none;
+}
+
+.student-list-wrapper p a:hover{
+    color: #2E0E02;
+    text-decoration: underline;
+}
+
+.student-list-wrapper {
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid navy;
+    background-color: rgba(238, 232, 170, 0.781);
+}
+
+.student-list-main {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+}
+
+.student{
+    margin-top:10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.student a {
+    text-decoration: none;
+    color: midnightblue;
+}
+
+.student a:hover {
+    text-decoration: underline;
+    color: midnightblue;
+}
+
+/*  show page  */
+
+.show-item {
+    margin-bottom: 10px;
+}
+
+#student-name {
+    font-size: 24px;
+    font-weight: bold;
+}

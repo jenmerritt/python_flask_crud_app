@@ -1,7 +1,14 @@
-{% block root %}
-    <div>
-      <p>
-          <a href="/students">Login</a>
-    </p>
-    </div>
-{% endblock %}
+<html>
+    <head>
+      <title>Your Hogwarts</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="root-page-wrapper">
+            <h1>
+                <a href="/students">Login</a>
+            </h1>
+          </div>
+    </body>
+</html>

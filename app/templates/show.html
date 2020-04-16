@@ -1,19 +1,28 @@
 {% extends "base.html" %}
 
 {% block show %}
-    <h1>Welcome to Hogwarts</h1>
-        <div>
-            <p>
-                {{ student.first_name}} {{ student.last_name }}
-            </p>
-            <p>
-                {{ student.wand}}
-            </p>
-            <p>
-                {{ student.patronus}}
-            </p>
-            <p>
-                {{ student.house}}
-            </p>
+    <div class="page-wrapper"></div>
+        <div class="heading">
+            <h1>Student Directory</h1>
         </div>
+        <div class="student-list-wrapper">
+            <ul class="student-list-main">
+                <div class="show-item">
+                    <li id="student-name">{{ student.first_name}} {{ student.last_name }}</li>
+                </div>
+                <div class="show-item">
+                    <li>House:</li>
+                    <li>{{ student.house}}</li>
+                </div>
+                <div class="show-item">
+                    <li>Wand:</li>
+                    <li>{{ student.wand}}</li>
+                </div>
+                <div class="show-item">
+                    <li>Patronus:</li>
+                    <li>{{ student.patronus}}</li>
+                </div>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

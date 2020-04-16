@@ -1,14 +1,16 @@
 <html>
     <head>
       <title>Your Hogwarts</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <ul>
-          <li><a href="/students">Your School</a></li>
-          <li><a href="/">Logout</a></li>
-        </ul>
-        <hr>
-        {% block root %}{% endblock %}
+        <nav>
+          <ul id="nav">
+            <li><a href="/students">Your School</a></li>
+            <li><a href="/">Logout</a></li>
+          </ul>
+        </nav>
         {% block index %}{% endblock %}
         {% block show %}{% endblock %}
     </body>
