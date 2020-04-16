@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block index %}
+    <h1>Welcome to Hogwarts</h1>
+    {% for student in students %}
+        <div>
+            <p>
+                <a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a>
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}

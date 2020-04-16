@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block show %}
+    <h1>Welcome to Hogwarts</h1>
+        <div>
+            <p>
+                {{ student.first_name}} {{ student.last_name }}
+            </p>
+            <p>
+                {{ student.wand}}
+            </p>
+            <p>
+                {{ student.patronus}}
+            </p>
+            <p>
+                {{ student.house}}
+            </p>
+        </div>
+{% endblock %}
