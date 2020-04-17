@@ -212,6 +212,8 @@ hr {
     color: midnightblue;
     font-size: 20px;
     font-family: 'Cinzel', serif;
+    width: 100%;
+    text-align: center;
 }
 
 .form-item label {
@@ -221,6 +223,7 @@ hr {
 .two-button-wrap {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 50%;
 }
@@ -267,14 +270,40 @@ hr {
     color: blue;
 }
 
-#Gryffindor, #Ravenclaw, #Slytherin, #Hufflepuff {
-    font-size: 70px;
-    font-weight: bold;
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+@media(max-width: 300px){
+    #Gryffindor, #Ravenclaw, #Slytherin, #Hufflepuff {
+        font-size: 20px;
+        font-weight: bold;
+        -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+           -moz-animation: fadein 5s; /* Firefox < 16 */
+            -ms-animation: fadein 5s; /* Internet Explorer */
+             -o-animation: fadein 5s; /* Opera < 12.1 */
+                animation: fadein 5s;
+    }
+}
+
+@media(min-width: 501px){
+    #Gryffindor, #Ravenclaw, #Slytherin, #Hufflepuff {
+        font-size: 40px;
+        font-weight: bold;
+        -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+           -moz-animation: fadein 5s; /* Firefox < 16 */
+            -ms-animation: fadein 5s; /* Internet Explorer */
+             -o-animation: fadein 5s; /* Opera < 12.1 */
+                animation: fadein 5s;
+    }
+}
+
+@media(min-width: 901px){
+    #Gryffindor, #Ravenclaw, #Slytherin, #Hufflepuff {
+        font-size: 70px;
+        font-weight: bold;
+        -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+           -moz-animation: fadein 5s; /* Firefox < 16 */
+            -ms-animation: fadein 5s; /* Internet Explorer */
+             -o-animation: fadein 5s; /* Opera < 12.1 */
+                animation: fadein 5s;
+    }
 }
 
 @keyframes fadein {
