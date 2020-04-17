@@ -7,14 +7,16 @@
         </div>
         <div class="student-list-wrapper">
             <h2>Your Enrolled Students</h2>
+            {% if students[0] != NoneType  %}
             <hr/>
             <ul class="student-list-main">
-            {% for student in students %}
-                <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a></li>
-            {% endfor %}
-            </ul>
+                {% for student in students %}
+                    <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a></li>
+                {% endfor %}
+                </ul>
             <hr/>
-            <p><a href="/students/new">Enrol Student</a></p>
+            {% endif %}
+            <a href="/students/new"><button class="button">Enrol Student</button></a>
         </div>
     </div>
 {% endblock %}

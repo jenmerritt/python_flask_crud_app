@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block new %}
+<div class="heading">
+    <h1>Enrol Student</h1>
+</div>
+<div class="student-list-wrapper">
+    <form action="/students" method="POST" id="add-student-form">
+        <div class="form-item">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" />
+        </div>
+        <div class="form-item">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="first_name" />
+        </div>
+        <div class="form-item">
+            <label for="last_name">Select House:</label>
+            <select type="text" name="house" id="house">
+                <option disabled selected>Select House</option>
+                <option name="house">Gryffindor</option>
+                <option name="house">Ravenclaw</option>
+                <option name="house">Hufflepuff</option>
+                <option name="house">Slytherin</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="wand">Wand:</label>
+            <input type="text" name="wand" id="wand" />
+        </div>
+        <div class="form-item">
+            <label for="patronus">Patronus:</label>
+            <input type="text" name="patronus" id="patronus" />
+        </div>
+        <div class="form-item">
+            <input type="submit" class="button" value="Enrol Student">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

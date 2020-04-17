@@ -6,23 +6,27 @@
             <h1>Student Directory</h1>
         </div>
         <div class="student-list-wrapper">
+            <h2 id="student-name">{{ student.first_name}} {{ student.last_name }}</h2>
+            <hr/>
             <ul class="student-list-main">
                 <div class="show-item">
-                    <li id="student-name">{{ student.first_name}} {{ student.last_name }}</li>
-                </div>
-                <div class="show-item">
-                    <li>House:</li>
+                    <li class="list-title">House:</li>
                     <li>{{ student.house}}</li>
                 </div>
                 <div class="show-item">
-                    <li>Wand:</li>
+                    <li class="list-title">Wand:</li>
                     <li>{{ student.wand}}</li>
                 </div>
                 <div class="show-item">
-                    <li>Patronus:</li>
+                    <li class="list-title">Patronus:</li>
                     <li>{{ student.patronus}}</li>
                 </div>
             </ul>
+            <hr/>
+            <a href="/students"><button class="button">Update Details</button></a>
+            <form action="/students/{{student.id}}/delete" method="POST">
+                <input type="submit" class="button" value="Expel Student">
+            </form>
         </div>
     </div>
 {% endblock %}
