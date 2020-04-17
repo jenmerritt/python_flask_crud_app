@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block new %}
+<div class="heading">
+    <h1>Sorting Ceremony</h1>
+</div>
+<div class="student-list-wrapper">
+    <h2>Better Be......</h2>
+    <h2 id="{{sorted_house}}">{{ sorted_house }}</h2>
+    <form action="/students/{{student.id}}/sorting" method="POST" id="add-student-form">
+            <input hidden type="text" name="first_name" id="first_name" value="{{student.first_name}}" />
+            <input hidden type="text" name="last_name" id="last_name" value="{{student.last_name}}" />
+            <input hidden type="text" name="house" value="{{sorted_house}}">
+            <input hidden  type="text" name="wand" id="wand" value="{{student.wand}}" />
+            <input hidden type="text" name="patronus" id="patronus" value="{{student.patronus}}" />
+        <div class="form-item">
+            <input type="submit" class="button" value="Confirm Sorting">
+        </div>
+    </form>
+    <a href="/students/{{student.id}}/sorting"><button class="button">Try Again</button></a>
+</div>
+
+{% endblock %}

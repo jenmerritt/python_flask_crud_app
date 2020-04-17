@@ -11,7 +11,11 @@
             <ul class="student-list-main">
                 <div class="show-item">
                     <li class="list-title">House:</li>
+                {% if student.house[0] != NoneType %}
                     <li>{{ student.house}}</li>
+                {% elif student.house[0] == NoneType %}
+                    <a href="/students/{{student.id}}/sorting"><button class="button">Sorting Ceremony</button></a>
+                {% endif %}
                 </div>
                 <div class="show-item">
                     <li class="list-title">Wand:</li>
@@ -23,7 +27,7 @@
                 </div>
             </ul>
             <hr/>
-            <a href="/students"><button class="button">Update Details</button></a>
+            <a href="/students/{{student.id}}/edit"><button class="button">Update Details</button></a>
             <form action="/students/{{student.id}}/delete" method="POST">
                 <input type="submit" class="button" value="Expel Student">
             </form>

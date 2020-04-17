@@ -14,7 +14,8 @@
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" id="first_name" />
         </div>
-        <div class="form-item">
+        <input hidden name="house" value=""/>
+        <!-- <div class="form-item">
             <label for="last_name">Select House:</label>
             <select type="text" name="house" id="house">
                 <option disabled selected>Select House</option>
@@ -23,7 +24,7 @@
                 <option name="house">Hufflepuff</option>
                 <option name="house">Slytherin</option>
             </select>
-        </div>
+        </div> -->
         <div class="form-item">
             <label for="wand">Wand:</label>
             <input type="text" name="wand" id="wand" />
@@ -36,6 +37,7 @@
             <input type="submit" class="button" value="Enrol Student">
         </div>
     </form>
+    <a href="/students"><button class="button">Cancel</button></a>
 </div>
 
 {% endblock %}

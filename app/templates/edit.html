@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block new %}
+<div class="heading">
+    <h1>Update Student Details</h1>
+</div>
+<div class="student-list-wrapper">
+    <form action="/students/{{student.id}}" method="POST" id="add-student-form">
+        <div class="form-item">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" value="{{student.first_name}}" />
+        </div>
+        <div class="form-item">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" value="{{student.last_name}}" />
+        </div>
+            <input hidden name="house" value="{{student.house}}">
+        <div class="form-item">
+            <label for="wand">Wand:</label>
+            <input type="text" name="wand" id="wand" value="{{student.wand}}" />
+        </div>
+        <div class="form-item">
+            <label for="patronus">Patronus:</label>
+            <input type="text" name="patronus" id="patronus" value="{{student.patronus}}" />
+        </div>
+        <div class="form-item">
+            <input type="submit" class="button" value="Update">
+        </div>
+    </form>
+    <a href="/students/{{student.id}}"><button class="button">Cancel</button></a>
+</div>
+
+{% endblock %}
