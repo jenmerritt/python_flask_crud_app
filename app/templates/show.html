@@ -27,10 +27,12 @@
                 </div>
             </ul>
             <hr/>
-            <a href="/students/{{student.id}}/edit"><button class="button">Update Details</button></a>
-            <form action="/students/{{student.id}}/delete" method="POST">
-                <input type="submit" class="button" value="Expel Student">
-            </form>
+            <div class="two-button-wrap">
+                    <a href="/students/{{student.id}}/edit"><button class="button" id="details-button">Update Details</button></a>
+                    <form action="/students/{{student.id}}/delete" method="POST">
+                        <input type="submit" class="button" value="Expel Student">
+                    </form>
+            </div>
         </div>
     </div>
 {% endblock %}

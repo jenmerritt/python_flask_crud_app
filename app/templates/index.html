@@ -11,7 +11,11 @@
             <hr/>
             <ul class="student-list-main">
                 {% for student in students %}
-                    <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }}</a></li>
+                    {% if student.house[0] == NoneType %}
+                        <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }} - not sorted</a></li>
+                    {% else %}
+                        <li class="student"><a href="/students/{{student.id}}">{{ student.first_name}} {{ student.last_name }} - {{ student.house }}</a></li>
+                    {% endif %}
                 {% endfor %}
                 </ul>
             <hr/>

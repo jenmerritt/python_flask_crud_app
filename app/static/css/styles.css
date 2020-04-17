@@ -197,11 +197,15 @@ hr {
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 0px 0;
 }
 
 .form-item {
     margin-bottom: 20px;
+}
+
+.form-item input[type=submit] {
+    margin-bottom: 0px!important;
 }
 
 .form-item label, input {
@@ -213,6 +217,29 @@ hr {
 .form-item label {
     margin-right: 5px;
 }
+
+.two-button-wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#details-button {
+    margin-right: 15px;
+}
+
+#try-again{
+    text-decoration: none;
+    color: midnightblue;
+}
+
+#try-again:hover{
+    text-decoration: underline;
+    color: midnightblue;
+}
+
+/* sorting */
 
 #house {
     padding: 20px;
@@ -238,17 +265,10 @@ hr {
 
 #Ravenclaw {
     color: blue;
-    font-size: 50px;
-    font-weight: bold;
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
 }
 
 #Gryffindor, #Ravenclaw, #Slytherin, #Hufflepuff {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 5s; /* Firefox < 16 */
